@@ -1,0 +1,29 @@
+.blur-figure {
+    width: 50%;
+    height: 70%;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.bg-pastel-blue-dark-with-blur {
+    background: linear-gradient(rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    box-shadow: 0 0 50px 50px linear-gradient(rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+}
+
+.bg-figure-first-position {
+    top: -20%;
+    left: -3%;
+    transform: rotate(45deg);
+}
+
+.bg-figure-second-position {
+    top: 15%;
+    right: -17%;
+    transform: rotate(123deg);
+}
+
+.bg-figure-third-position {
+    top: 64%;
+    left: 11%;
+    transform: rotate(206deg);
+}

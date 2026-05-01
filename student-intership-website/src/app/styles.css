@@ -1,0 +1,58 @@
+:root {
+    --white: #FFFFFF;
+    --white-blue: #F9FAFE;
+    --pastel-blue-light: #B5E4F7;
+    --pastel-blue-hover: #89CFF0;
+    --pastel-blue-dark: #6BB8D9;
+    --lilac-light: #D8C5F0;
+    --lilac-hover: #C4AEDF;
+    --lilac-bg: #EDE4F5;
+    --purple-soft: #B39CD0;
+    --purple-main: #9B8EC7;
+    --purple-hover: #8A7BB8;
+    --text-dark: #2D3E50;
+    --text-soft: #ededed;
+    --text-light: #ffffff;
+    --shadow-light: rgba(181, 228, 247, 0.2);
+    --shadow-medium: rgba(181, 228, 247, 0.3);
+    --gradient-blue-white: linear-gradient(135deg, #B5E4F7 0%, #FFFFFF 100%);
+    --gradient-lilac-purple: linear-gradient(120deg, #D8C5F0 0%, #EDE4F5 100%);
+    --gradient-purple-soft: linear-gradient(135deg, #9B8EC7 0%, #B39CD0 100%);
+    }
+
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(30deg, rgb(68 92 215) 0%, rgb(233 100 127) 100%);
+}  
+
+.hidden-overflow {
+    overflow: hidden;
+}
+
+.glass-effect {
+    background-image: linear-gradient(135deg, rgba(255,255,255,0.2) 30%, rgba(255,255,255,0) 90%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dark-radius-border {
+    border: 1px solid var(--text-dark);
+    border-radius: 40px;
+}
+
+.input-box {
+    margin: 0 0 3px 0;
+    padding: 3px 10px;
+    background-color: var(--lilac-bg);
+}
