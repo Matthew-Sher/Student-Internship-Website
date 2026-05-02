@@ -23,7 +23,7 @@ export const Registration = () => {
   };
 
   return (
-    <div className={`hidden-overflow ${styles.loginFormContainer}`}>
+    <div className={`hidden-overflow ${styles.registrationFormContainer}`}>
       <form onSubmit={handleSubmit} className={`glass-effect ${styles.form}`}>
         <div className={styles.leftAlignmentContainer}>
           <label>Email</label>
@@ -71,7 +71,7 @@ export const Registration = () => {
           </label>
         </div>
 
-        <AuthButton text='Зарегистрироваться'/>
+        <AuthButton text={`Зарегистрироваться`} />
       </form>
     </div>
   );
