@@ -1,0 +1,9 @@
+.logoArea {
+    font-weight: 800;
+    font-size: 1.5rem;
+    background: var(--gradient-purple-soft);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+}

@@ -1,13 +1,13 @@
-export async function registerUser(userData) {
-  const response = await fetch("http://localhost:8080/auth/register", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(userData),
-  });
+import { ENDPOINTS } from "../../../shared/api/endpoints";
+import { httpClient } from "../../../shared/api/httpClien";
 
-  // console.log(response);
+
+export async function registerUser(userData) {
+  let options = {
+    method: 'POST',
+    body: userData,
+  };
+  let response = await httpClient(ENDPOINTS.AUTH.REGISTER, options);
 
   return response;
 }

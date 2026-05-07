@@ -1,13 +1,12 @@
+import { ENDPOINTS } from "../../../shared/api/endpoints";
+import { httpClient } from "../../../shared/api/httpClien";
+
 export async function loginUser(userData) {
-    const response = await fetch('http://localhost:8080/auth/login', {
-        method: 'POST',
-        headers: {
-            'Content-type': "application/json",
-        },
-        body: JSON.stringify(userData),
-    });
+  let options = {
+    method: 'POST',
+    body: userData,
+  };
+  let response = await httpClient(ENDPOINTS.AUTH.LOGIN, options);
 
-    // console.log(response);
-
-    return response;
+  return response;
 }

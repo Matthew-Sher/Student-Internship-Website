@@ -1,0 +1,63 @@
+/* .header {
+
+} */
+
+.navbar {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    padding: 0.9rem 2rem;
+    box-shadow: 0 4px 18px var(--shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(181, 228, 247, 0.4);
+    border-bottom-left-radius: 40px;
+}
+
+.navLinks {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navBtn {
+    background: transparent;
+    border: none;
+    padding: 0.6rem 1.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: var(--text-dark);
+}
+
+.navBtn.active {
+    background: var(--gradient-blue-white);
+    color: var(--purple-main);
+    box-shadow: 0 4px 10px var(--shadow-medium);
+    border: 1px solid var(--pastel-blue-light);
+}
+
+.navBtn:hover {
+    background: var(--pastel-blue-hover);
+    color: var(--text-dark);
+    transform: translateY(-2px);
+}
+
+.accountBtn {
+    background: var(--lilac-light);
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.accountBtn:hover {
+    background: var(--lilac-hover);
+}
