@@ -17,12 +17,18 @@ export async function makeRequest(url, options = {}, token) {
 }
 
 export async function refreshTokens() {
+    const accessToken = tokenService.getAccess();
+    const refreshToken = tokenService.getRefresh();
+
     let response = await fetch(API_BASE_URL + ENDPOINTS.AUTH.REFRESH, {
         method: 'POST',
-        credentials: 'include',
         headers: {
+            "Authorization": `Bearer ${accessToken}`,
             "Content-type": "application/json",
         }, 
+        body: JSON.stringify({
+            "refreshToken": refreshToken,
+        }),
     });
 
     if (!response.ok) {
@@ -30,20 +36,22 @@ export async function refreshTokens() {
     }
 
     let data = await response.json();
-    tokenService.set(data.accessToken);
+    tokenService.setTokens(data);
 }
 
 export async function httpClient(url, options) {
-    const token = tokenService.get();
+    const token = tokenService.getAccess();
     let response = await makeRequest(url, options, token);
+
+    //нужно как-то ссохранять accessToken в tokenService, чтобы он не стерался при загрузке других страниц
 
     if (response.ok) {
         return response;
     }
     
     await refreshTokens();
-    const newToken = tokenService.get();
-    response = await makeRequest(url, options, token);
+    const newToken = tokenService.getAccess();
+    response = await makeRequest(url, options, newToken);
 
     return response;
 }

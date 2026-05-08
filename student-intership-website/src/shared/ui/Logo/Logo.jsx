@@ -2,8 +2,8 @@ import styles from './Logo.module.css';
 
 export const Logo = ({text}) => {
     return (
-        <div className={ styles.logoArea }> 
+        <h1 className={ styles.logoArea }> 
             {text}
-        </div>
+        </h1>
     );
 }

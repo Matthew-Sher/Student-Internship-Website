@@ -6,7 +6,7 @@ export const Header = () => {
     return (
         <header>
             <nav className={`${styles.navbar}`}>
-                <Logo text={`CampusCareer`} />
+                <Logo text={`Стажировка.ру`} />
                 <div className={styles.navLinks}>
                     <button className={`${styles.navBtn} ${styles.active}`} id="mainPageBtn">Главная</button>
                     <button className={`${styles.navBtn} ${styles.accountBtn}`} id="accountPageBtn">Аккаунт</button>

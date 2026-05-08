@@ -2,12 +2,14 @@ import { useState } from "react";
 import styles from './Login.module.css';
 import { AuthButton } from "../../../shared/ui/AuthButton/AuthButton";
 import { loginUser } from "./api";
+import { Link, useNavigate } from 'react-router-dom'; 
 
 export const Login = () => {
     const [form, setForm] = useState({
         email: '',
         password: '',
     }); 
+    let navigate = useNavigate();
 
     const handleChange = (e) => {
         setForm({
@@ -18,7 +20,10 @@ export const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await loginUser(form);
+        let response = await loginUser(form);
+        if (response.ok) {
+            navigate('/');
+        }
     }
 
     return (
@@ -45,6 +50,8 @@ export const Login = () => {
                 </div>
                 
                 <AuthButton text={`Войти`} />
+
+                <Link className={`${styles.link}`} to='/register'>Заргистрироваться</Link>
             </form>
         </div>
     );

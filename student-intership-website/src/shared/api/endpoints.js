@@ -7,4 +7,9 @@ export const ENDPOINTS = {
         LOGOUT: '/auth/logout',
         REFRESH: '/auth/refersh',
     },
+    PROFILE_CONTROLLER: {
+        ME: '/profiles/me',
+        STUDENT: '/profiles/student',
+        EMPLOYER: '/profiles/employer',
+    }
 };
