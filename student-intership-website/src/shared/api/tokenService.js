@@ -8,7 +8,6 @@ export const tokenService = {
   },
 
   clear: () => {
-    localStorage.removeItem('accessToken');
-    localStorage.removeItem('refreshToken');
+    localStorage.clear();
   }
 };

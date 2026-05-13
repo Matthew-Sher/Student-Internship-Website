@@ -1,0 +1,58 @@
+.button {
+    all: unset;
+    padding: 10px;
+    color: #F0F5FF;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.15s ease-in-out,
+                background-color 0.15s ease-in-out,
+                transform 0.15s ease-in-out,
+                box-shadow 0.15s ease-in-out;
+    border-radius: 1000px;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ----------default------------ */
+.default {
+    background-color: rgba(200, 200, 200, 0.2);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.default:hover {
+    background-color: rgba(235, 235, 235, 0.35);
+    border-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+/*-------------primary------------*/
+.primary {
+    background-color: rgba(100, 100, 200, 0.2);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(155, 155, 255, 0.4);
+    border: 1px solid rgba(155, 155, 255, 0.35);
+}
+
+.primary:hover {
+    background-color: rgba(135, 135, 235, 0.35);
+    border-color: rgba(155, 155, 255, 0.7);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(155,155,255,0.5);
+}
+
+/*-------------danger-------------*/
+.danger {
+    background-color: rgba(200, 100, 100, 0.2);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 155, 155, 0.4);
+    border: 1px solid rgba(255, 155, 155, 0.35);
+}
+
+.danger:hover {
+    background-color: rgba(235, 135, 135, 0.35);
+    border-color: rgba(255, 155, 155, 0.7);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255,155,155,0.5);
+}

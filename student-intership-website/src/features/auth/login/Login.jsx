@@ -51,7 +51,7 @@ export const Login = () => {
                 
                 <AuthButton text={`Войти`} />
 
-                <Link className={`${styles.link}`} to='/register'>Заргистрироваться</Link>
+                <Link className={`${styles.link}`} to='/register'>Зарегистрироваться</Link>
             </form>
         </div>
     );

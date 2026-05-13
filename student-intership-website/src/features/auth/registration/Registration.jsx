@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { AuthButton } from '../../../shared/ui/AuthButton/AuthButton';
 import styles from './Registration.module.css';
 import { registerUser } from './api';
@@ -9,6 +10,7 @@ export const Registration = () => {
     password: '',
     role: 'ROLE_STUDENT',
   });
+  let navigate = useNavigate();
 
   const handleChange = (e) => {
     setForm({
@@ -19,7 +21,10 @@ export const Registration = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await registerUser(form);
+    let response = await registerUser(form);
+    if (response.ok) {
+      navigate('/');
+    };
   };
 
   return (

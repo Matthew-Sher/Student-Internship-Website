@@ -5,7 +5,7 @@ export const ENDPOINTS = {
         LOGIN: '/auth/login',
         REGISTER: '/auth/register', 
         LOGOUT: '/auth/logout',
-        REFRESH: '/auth/refersh',
+        REFRESH: '/auth/refresh',
     },
     PROFILE_CONTROLLER: {
         ME: '/profiles/me',

@@ -43,9 +43,7 @@ export async function httpClient(url, options) {
     const token = tokenService.getAccess();
     let response = await makeRequest(url, options, token);
 
-    //нужно как-то ссохранять accessToken в tokenService, чтобы он не стерался при загрузке других страниц
-
-    if (response.ok) {
+    if (response.status !== 401) {
         return response;
     }
     
